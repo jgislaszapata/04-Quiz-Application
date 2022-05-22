@@ -2,34 +2,35 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-section {
-    /* border: 2px solid red; */
+.landing-page {
+    border: 2px solid black;
+    border-radius: 10px;;
     margin: 8em auto;
     width: 50%;
 }
 
-section h1, 
+.landing-page h1, 
 p { 
     text-align: center;
     padding-left: 18px;
     padding-right: 18px;
 }
 
-section h1 {
+.landing-page h1 {
     font-size: 3em;
     margin-bottom: 14px;
 }
 
-section p {
+.landing-page p {
     font-size: 1.25em;
 }
 
-section button {
+.landing-page button {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     width: 20%;
     height: 40px;
-    background-color: purple;
+    background-color: hotpink;
     color: white;
     font-weight: bolder;
     border-radius: 10px;

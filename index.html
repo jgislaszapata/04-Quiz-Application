@@ -7,11 +7,26 @@
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
+
 <body>
-    <section class="section-main" id="">
+
+    <!-- The following elements represent what will be shown upon opening the page in browser -->
+    <section class="landing-page" id="landing-page">
         <h1>Welcome to the coding quiz</h1>
         <p>This is a timed coding quiz. For every incorrect answer you give, points will be deducted from your score. Try to answer all questions within the time alotted. Good luck! </p>
         <button type="button" id="btn-start">Start Quiz</button>
     </section>
+
+    <!-- The following section will contain the quiz content -->
+    <section class="quiz-screen" id="quiz-screen">
+        <h1 class="question-area" id="question-area"></h1>
+        <p class="choice-btns" id="choice-btns"></p>
+        <p class="user-feedback" id="user-feedback"></p>
+    </section>
+
+
+    <script src="./assets/script.js"></script>
+
+
 </body>
 </html>
