@@ -76,39 +76,3 @@ function showQuiz() {
 
 
 
-
-
-
-
-
-
-
-// function renderQuiz() {
-//     for (var i = 0; i < quizQuestions.length; i++) {
-//         let currentQuestion = quizQuestions[questionIndex].question;
-//         let quizChoices = quizQuestions[questionIndex].choices;
-//         questionBody.textContent = currentQuestion;
-//     }
-//     quizChoices.forEach(function (newItem) {
-//         let choiceBtns = document.createElement("li");
-//         choiceBtns.textContent = newItem;
-//         choicesUl.appendChild(choiceBtns);
-//         choiceBtns.addEventListener("click",(answerEval));
-//     });
-// }
-
-//  function answerEval(event) {
-//      let item = event.target;
-//      if (item.matches("li")) {
-//          answerFeedback.textContent = "";
-//      }
-//      if (item.textContent == quizQuestions[questionIndex].answer) {
-//          answerFeedback.textContent = "Correct!";
-//      } else {
-//          answerFeedback.textContent = "Wrong!";
-//      }
-// }
-
-// if (questionIndex >= quizQuestions.length) {
-
-// }
