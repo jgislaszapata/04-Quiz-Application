@@ -35,3 +35,11 @@ p {
     font-weight: bolder;
     border-radius: 10px;
 }
+
+.question-area {
+    font-size: 3em;
+    margin-bottom: 14px;
+    text-align: center;
+    padding-left: 18px;
+    padding-right: 18px;
+}

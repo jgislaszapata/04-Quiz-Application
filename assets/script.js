@@ -3,10 +3,12 @@ const landingPage = document.getElementById('landing-page');
 const startButton = document.getElementById('btn-start');
 const quizPage = document.getElementById('quiz-screen');
 const questionBody = document.getElementById('question-area');
-const choiceButtons = document.getElementById('choice-btns');
+const choicesUl = document.getElementById('choices-ul');
 const answerFeedback = document.getElementById('user-feedback');
 
 // This array contains each question, their responses, and the correct answer
+let userScore = 0;
+let questionIndex = 0;
 const quizQuestions = [
     {
         question: "Commonly used data types do not include:",
@@ -34,9 +36,79 @@ const quizQuestions = [
         answer: "console.log"
     }
 ]   
+
 // The following three lines will erase the landing page
-startButton.addEventListener("click", clearLanding);
-function clearLanding() {
+startButton.addEventListener("click", clearLandingPage);
+function clearLandingPage() {
     landingPage.style.display = "none";
     console.log(`'Start Quiz' button clicked.`)
+    showQuiz();
+
 }
+
+// Displays initial question and set of answers 
+function showQuiz() {
+   for (i = 0; i <quizQuestions.length -1; i++) {
+    let currentQuestionBody = quizQuestions[questionIndex].question;
+    questionBody.textContent = currentQuestionBody;
+    let currentChoiceList = quizQuestions[questionIndex].choices[i];
+    let choicesButtons = document.createElement("li");
+    choicesButtons.setAttribute("type", "button");
+    choicesButtons.setAttribute("class", "btn btn-primary");
+    choicesButtons.setAttribute("style", "color: white; background-color: blue; width: 140px; height: 90px; padding-top: 12px; margin: 18px; border-radius: 10px; ");
+    choicesUl.appendChild(choicesButtons);
+    choicesButtons.textContent = currentChoiceList;
+    choicesButtons.addEventListener("click", function (nextQuestion){
+        questionIndex++;
+    });
+   
+    }
+
+   
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function renderQuiz() {
+//     for (var i = 0; i < quizQuestions.length; i++) {
+//         let currentQuestion = quizQuestions[questionIndex].question;
+//         let quizChoices = quizQuestions[questionIndex].choices;
+//         questionBody.textContent = currentQuestion;
+//     }
+//     quizChoices.forEach(function (newItem) {
+//         let choiceBtns = document.createElement("li");
+//         choiceBtns.textContent = newItem;
+//         choicesUl.appendChild(choiceBtns);
+//         choiceBtns.addEventListener("click",(answerEval));
+//     });
+// }
+
+//  function answerEval(event) {
+//      let item = event.target;
+//      if (item.matches("li")) {
+//          answerFeedback.textContent = "";
+//      }
+//      if (item.textContent == quizQuestions[questionIndex].answer) {
+//          answerFeedback.textContent = "Correct!";
+//      } else {
+//          answerFeedback.textContent = "Wrong!";
+//      }
+// }
+
+// if (questionIndex >= quizQuestions.length) {
+
+// }
